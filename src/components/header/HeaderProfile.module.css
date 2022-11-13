@@ -1,0 +1,65 @@
+.header-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 3rem 0 1rem;
+}
+
+.header-profile__notif {
+  margin-right: 0.5rem;
+}
+
+.header-profile__img {
+  margin: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+
+.header-profile__details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.header-profile__details__name {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.header-profile__details__email {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+
+  color: #9a9ab0;
+}
+
+@media screen and (min-width: 0) and (max-width: 500px) {
+  .header-logo__title {
+    display: none;
+  }
+  .header-profile__details__name {
+    font-size: 1rem;
+  }
+  .header-profile {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 450px) {
+  .header-profile {
+    padding: 0.5rem;
+  }
+  .header-profile__details {
+    display: none;
+  }
+}
