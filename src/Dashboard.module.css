@@ -1,0 +1,23 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dashboard__main {
+    overflow: hidden;
+    display: flex;
+    height: 90vh;
+
+}
+
+.dashboard__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dashboard__content__inner {
+    overflow: auto;
+    width: 100%;
+}

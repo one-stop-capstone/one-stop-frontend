@@ -1,11 +1,18 @@
 .sidebar {
   background-color: #1f1d2b;
-  grid-area: sidebar;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0.1rem;
+  flex: 0 0;
+  height: 100%;
+
+
+}
+
+.divider {
+  background-color: #3c4156;
+  height: 0.2rem;
 }
 
 .sidebar-icons__top {

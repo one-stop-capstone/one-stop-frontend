@@ -1,0 +1,36 @@
+.card {
+    margin: 1rem;
+    background-color: #3c4156;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    border-radius: 1rem;
+}
+
+
+.card img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+}
+
+.card__title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.card__button {
+    background-color: #1f1d2b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    align-self: flex-end;
+}

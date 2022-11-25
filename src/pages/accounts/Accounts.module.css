@@ -1,0 +1,15 @@
+.accounts_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.accounts__link__new__accounts {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1f1d2b;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
