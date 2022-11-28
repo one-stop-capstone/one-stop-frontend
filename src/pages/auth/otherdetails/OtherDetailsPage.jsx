@@ -2,7 +2,6 @@ import React from "react";
 import AuthInputFormOtherDetails from "./AuthInputFormOtherDetails";
 import styles from "./OtherDetailsPage.module.css";
 import AuthHero from "../components/AuthHero";
-import Divider from "../../../components/ui/Divider";
 
 const OtherDetailsPage = () => {
   return (

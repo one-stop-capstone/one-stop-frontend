@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import InputWithLabel from "../../../components/ui/InputWithLabel";
 import styles from "./AuthInputFormSignup.module.css";
 import Button from "../../../components/ui/Button";
@@ -7,7 +7,7 @@ import { useAuth } from "../../../context/AuthContext";
 
 const AuthInputFormSignup = () => {
   const [loading, setLoading] = useState(false);
-  const { signup, currentUser } = useAuth();
+  const { signup } = useAuth();
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
