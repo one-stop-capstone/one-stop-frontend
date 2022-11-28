@@ -1,0 +1,72 @@
+.auth-input-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-input-form form {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.auth-input-form__container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-input-form__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+}
+
+.auth-input-form__checkbox-input {
+    border-radius: 5px;
+}
+
+.auth-input-form__checkbox-label {
+
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 120%;
+
+    letter-spacing: 0.005em;
+    color: #9A9AB0;
+}
+
+.auth-input-form__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.auth-input-form__signin-button {
+    margin-top: 30px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 120%;
+    right: 0;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #0D8BFF;
+    display: flex;
+    align-items: center;
+
+}
+
+.auth-input-form__error {
+    color: red
+}

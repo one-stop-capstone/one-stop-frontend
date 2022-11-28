@@ -1,0 +1,63 @@
+.auth-hero {
+    width: 45%;
+    height: 100%;
+    background: #252836;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.auth-hero__title {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #9A9AB0;
+    margin: 20px 0;
+
+}
+
+.auth-hero__tagline {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+.auth-hero img {
+    width: 60%;
+    height: 50%;
+
+}
+
+@media screen and (max-width: 850px) {
+    .auth-hero {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .auth-hero {
+        width: 100%;
+    }
+}

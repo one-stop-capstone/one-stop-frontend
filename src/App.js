@@ -8,19 +8,25 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import Auth from "./pages/auth/Auth";
+import AuthPage from "./pages/auth/AuthPage";
+import AuthProvider from "./context/AuthContext";
+import { useAuth } from "./context/AuthContext";
 
 function App() {
+  const currentUser = useAuth();
+  console.log(currentUser);
   return (
-    <Router>
-      <div className={styles["app"]}>
-        <Routes>
-          <Route path="auth/*" element={<Auth />} />
-          <Route path="app/*" element={<Dashboard />} />
-          <Route path="*" element={<Navigate to="/app" />} />
-        </Routes>
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div className={styles["app"]}>
+          <Routes>
+            <Route path="auth/*" element={<AuthPage />} />
+            <Route path="app/*" element={<Dashboard />} />
+            <Route path="*" element={<Navigate to="/app" />} />
+          </Routes>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
