@@ -1,7 +1,4 @@
-import React from "react";
-
-import styles from "./App.module.css";
-import Dashboard from "./Dashboard";
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Route,
