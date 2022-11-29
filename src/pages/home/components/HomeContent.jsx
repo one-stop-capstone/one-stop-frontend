@@ -1,8 +1,8 @@
-import React from 'react';
-import { gql } from '@apollo/client';
-import { useQuery } from '@apollo/client';
+import React from "react";
+import { gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 
-import QuestionCards from './QuestionCards';
+import QuestionCards from "./QuestionCards";
 
 const GET_ALL_QUESTIONS = gql`
   query MyQuery {
@@ -29,8 +29,8 @@ const HomeContent = () => {
 
   return (
     <div>
-      {data['questions'].map((question) => {
-        return <QuestionCards questionDetails={question} />;
+      {data["questions"].map((question) => {
+        return <QuestionCards key={question.id} questionDetails={question} />;
       })}
     </div>
   );

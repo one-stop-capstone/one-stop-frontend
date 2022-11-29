@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InputWithLabel from "../../../components/ui/InputWithLabel";
 import styles from "./AuthInputFormSignin.module.css";
 import Button from "../../../components/ui/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 
 const AuthInputFormSignin = () => {
@@ -10,7 +10,7 @@ const AuthInputFormSignin = () => {
   const { signin } = useAuth();
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const navigate = useNavigate();
   const signInFormSubmitHandler = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -20,6 +20,7 @@ const AuthInputFormSignin = () => {
     signin(email, password)
       .then(() => {
         setLoading(false);
+        navigate("/app");
       })
       .catch((err) => {
         setError(true);

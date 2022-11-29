@@ -42,10 +42,10 @@
 }
 
 .right-section {
-  display: flex;
-  flex-direction: column;
+  /* background-color: black; */
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .buttons {
@@ -78,14 +78,15 @@
 }
 
 .extra-details {
+  margin: 1rem;
   width: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-;
+  justify-content: space-between;
 }
 
 .extra-details p {
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  /* padding: 0.5rem 1rem 0.5rem 1rem; */
   font-weight: bold;
   font-size: 1.5rem;
 }

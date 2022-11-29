@@ -70,3 +70,61 @@
 .auth-input-form__error {
     color: red
 }
+
+.input-with-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    width: 83.997%;
+}
+
+
+
+.input-with-label label {
+    display: block;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    margin-left: 13px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+
+}
+
+.input-with-label select {
+    background: #252836;
+    border: 1px solid #0D8BFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 39px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    color: #9A9AB0;
+    padding-left: 12px;
+    width: 100%;
+}
+
+.auth-input-form__container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+
+
+    .input-with-label {
+        margin: 10px 0;
+    }
+}

@@ -9,6 +9,7 @@ const InputWithLabel = (props) => {
       }`}
     >
       <label htmlFor={props.id}>{props.name}</label>
+
       <input
         id={props.id}
         type={props.type}
@@ -16,6 +17,8 @@ const InputWithLabel = (props) => {
         required={props.required}
         ref={props.ref}
         disabled={props.disabled}
+        list={props.list}
+        minLength={props.minlength}
       />
     </div>
   );

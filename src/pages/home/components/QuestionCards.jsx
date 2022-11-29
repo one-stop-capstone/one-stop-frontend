@@ -31,7 +31,6 @@ const QuestionCards = ({ questionDetails }) => {
         </div>
         <div className={styles['extra-details']}>
           <p>{questionDetails.difficulty}</p>
-          <p>|</p>
           <p>20 +</p>
         </div>
       </div>

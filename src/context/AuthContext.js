@@ -6,6 +6,8 @@ import {
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
+import { useQuery } from "@apollo/client";
+import { getUserID } from "../queries/index";
 
 const AuthContext = createContext();
 
@@ -16,6 +18,7 @@ export const useAuth = () => {
 const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
+  const [currentUserId, setCurrentUserId] = useState();
 
   const signup = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -33,6 +36,10 @@ const AuthProvider = ({ children }) => {
     return sendPasswordResetEmail(auth, email);
   };
 
+  const fetchUserId = (uid) => {
+    setCurrentUserId(uid);
+  };
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
@@ -44,10 +51,12 @@ const AuthProvider = ({ children }) => {
 
   const value = {
     currentUser,
+    currentUserId,
     signin,
     signup,
     logout,
     resetPassword,
+    fetchUserId,
   };
 
   return (
