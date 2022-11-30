@@ -25,10 +25,14 @@ const Sidebar = () => {
         <Link to="/app/link-accounts">
           <FaPaperclip className={styles["sidebar-icons"]} size="2.5rem" />
         </Link>
+        <Link to="/app/contests">
         <FaTrophy className={styles["sidebar-icons"]} size="2.5rem" />
+        </Link>
       </div>
       <div className={styles["sidebar-icons__bottom"]}>
+        <Link to="/app/settings">
         <FaRegSun className={styles["sidebar-icons"]} size="2.5rem" />
+        </Link>
       </div>
     </div>
   );

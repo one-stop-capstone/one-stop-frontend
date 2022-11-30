@@ -5,7 +5,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home/Home";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Accounts from "./pages/accounts/Accounts";
-import Profile from "./pages/profile/Profile";
+import Settings from "./pages/settings/Settings";
+import Contests from "./pages/contests/Contests";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -23,7 +24,8 @@ const Dashboard = () => {
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/link-accounts" element={<Accounts />} />
-              <Route path="/profile" element={<Profile />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/contests" element={<Contests />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </div>

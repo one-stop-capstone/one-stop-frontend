@@ -1,0 +1,38 @@
+.settings_container {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 4rem 2rem 4rem;
+    justify-content: space-between;
+    
+}
+
+.settings_card {
+    display: flex;
+    background-color: #1f1d2b;
+    margin: 1rem;
+    padding: 1rem;
+    text-decoration: white;
+    flex-direction: column;
+    border-radius: 1rem;
+    width: 30%;
+    height: 25rem;
+    overflow: hidden;
+    
+}
+
+.settings_card img {
+    margin: 0.25rem;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.card__text_header {
+    display: flex;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 1rem 2rem 1rem 2rem; 
+    justify-content: center;
+
+}
