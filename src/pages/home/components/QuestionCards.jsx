@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styles from './QuestionCards.module.css';
+import TagSection from './TagSection';
 
 const QuestionCards = ({ questionDetails }) => {
   const solveButtonHandler = (e) => {
@@ -13,11 +14,7 @@ const QuestionCards = ({ questionDetails }) => {
       <div className={styles['left-section']}>
         <h1 className={styles['source-name']}>{questionDetails.source}</h1>
         <h1 className={styles['question-title']}>{questionDetails.title}</h1>
-        <div className={styles['tag-names']}>
-          <div className={styles['tag-card']}>array</div>
-          <div className={styles['tag-card']}>string</div>
-          <div className={styles['tag-card']}>tree</div>
-        </div>
+        <TagSection questionId={questionDetails.id} />
       </div>
       <div className={styles['right-section']}>
         <div className={styles['buttons']}>
@@ -30,9 +27,7 @@ const QuestionCards = ({ questionDetails }) => {
           <button className={styles['add-button']}>+</button>
         </div>
         <div className={styles['extra-details']}>
-          <p>{questionDetails.difficulty}</p>
-          <p>|</p>
-          <p>20 +</p>
+          {questionDetails.difficulty}
         </div>
       </div>
     </div>
