@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Settings.module.css";
+import { Button, Radio, Space, Divider } from "antd";
+import { DownloadOutlined } from '@ant-design/icons';
 
 const Settings = () => {
   const [inputs, setInputs] = useState({});
@@ -74,32 +76,45 @@ const Settings = () => {
               ></input>
             </div>
             <div className={styles["inner_card"]}>
-            <label>
-              Passing out year:
-              </label>
-              <select>
-                {years.map((year, index) => {
-                  return (
-                    <option key={`year${index}`} value={year}>
-                      {year}
-                    </option>
-                  );
-                })}
-              </select>
+              <div className={styles["input-with-label"]}>
+                <label htmlFor="passingyear">Year of Passing: </label>
+
+                <select id="passingyear" form="signupform" defaultValue="none">
+                  <option value="none" disabled hidden>
+                    Select Passing Year
+                  </option>
+                  {Array(10)
+                    .fill()
+                    .map((element, index) => index + 2023)
+                    .map((year) => (
+                      <option key={year} value={year}>
+                        {year}
+                      </option>
+                    ))}
+                </select>
               </div>
+            </div>
             <div className={styles["inner_card"]}>
-            <RadioButton
-              label="Dark Theme"
-              value={favorite === "dark"}
-              onChange={darkTheme}
-            />
-            <RadioButton
-              label="Default"
-              value={favorite === "default"}
-              onChange={defaultTheme}
-            />
+              <RadioButton
+                label="Dark Theme"
+                value={favorite === "dark"}
+                onChange={darkTheme}
+              />
+              <RadioButton
+                label="Default"
+                value={favorite === "default"}
+                onChange={defaultTheme}
+              />
             </div>
             <input type="submit" className={styles["btn"]}></input>
+            <Button
+              type="primary"
+              shape="round"
+              icon={<DownloadOutlined />}
+              danger
+            >
+              Log Out
+            </Button>
           </form>
         </div>
       </div>

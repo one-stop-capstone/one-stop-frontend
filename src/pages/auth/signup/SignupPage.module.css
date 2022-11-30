@@ -1,0 +1,76 @@
+.sign-up-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+}
+
+
+.auth-component__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.auth-component__heading {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.005em;
+    height: 70%;
+    color: #FFFFFF;
+}
+
+.auth-component__subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 120%;
+    margin: 5px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #9A9AB0;
+}
+
+.auth-component__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+
+}
+
+.auth-component__auth-logo-btn {
+    width: 70%;
+    height: 60%;
+    padding: 8px;
+}
+
+
+
+@media screen and (max-width: 850px) {
+    .auth-component {
+        width: 100%;
+    }
+}

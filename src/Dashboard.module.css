@@ -12,6 +12,7 @@
 }
 
 .dashboard__content {
+    background-color: #3c4156;
     display: flex;
     flex-direction: column;
     width: 100%;

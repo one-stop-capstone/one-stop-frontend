@@ -1,0 +1,99 @@
+.codesheetcard__line {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #1f1d2b;
+    width: 50%;
+
+}
+
+.codesheetcard__line:hover {
+    box-shadow: rgb(255, 255, 255);
+    background-color: #332f46;
+}
+
+.codesheetcard__details__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 0.8rem;
+    color: #ac9c9c;
+    font-weight: 500;
+}
+
+.codesheetcard_contaner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+}
+
+.codesheetcard__avataar {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: blueviolet;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.codesheetcard__avataar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.codesheetcard_contaner .codesheetcard__details {
+    margin-left: 1.5rem;
+    line-height: 1.3rem;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.codesheetcard__details__creator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.codesheetcard__details__creator span {
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    color: #ac9c9c;
+    font-weight: 500;
+}
+
+.codesheetcard__details__creator p {
+    font-size: 0.8rem;
+    color: #ac9c9c;
+    font-weight: 500;
+}
+
+.codesheetcard__likebutton {
+    display: flex;
+    margin-right: 0.5rem;
+
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+
+/* .codesheetcard_contaner .codesheetcard_info .codesheetcard__avataar .codesheetcard__details .codesheetcard__details__title .codesheetcard__details__creator .codesheetcard__questionsno .codesheetcard__likebutton */
