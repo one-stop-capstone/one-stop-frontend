@@ -35,10 +35,121 @@ const HomeContent = () => {
     'tree',
   ];
 
-  const initialSourcesArray = ['Leetcode', 'GeeksForGeeks'];
+  const initialSourcesArray = [
+    'Leetcode',
+    'GeeksForGeeks',
+    'CodingNinjas',
+    'CodeChef',
+  ];
 
   const [tagsArray, setTagsArray] = useState(initialTagsArray);
   const [sourcesArray, setSourcesArray] = useState(initialSourcesArray);
+
+  const tagsInitialState = [
+    {
+      title: 'array',
+      isChecked: false,
+    },
+    {
+      title: 'hashed map',
+      isChecked: false,
+    },
+    {
+      title: 'sorting',
+      isChecked: false,
+    },
+    {
+      title: 'stack',
+      isChecked: false,
+    },
+    {
+      title: 'linked list',
+      isChecked: false,
+    },
+    {
+      title: 'graph',
+      isChecked: false,
+    },
+    {
+      title: 'tree',
+      isChecked: false,
+    },
+  ];
+
+  const [tagState, setTagState] = useState(tagsInitialState);
+
+  const sourcesInitialState = [
+    {
+      title: 'Leetcode',
+      isChecked: false,
+    },
+    {
+      title: 'GeeksForGeeks',
+      isChecked: false,
+    },
+    {
+      title: 'CodingNinjas',
+      isChecked: false,
+    },
+    {
+      title: 'CodeChef',
+      isChecked: false,
+    },
+  ];
+
+  const [sourceState, setSourceState] = useState(sourcesInitialState);
+
+  const filterTagsHandler = (tag) => {
+    setTagState((current) =>
+      current.map((obj) => {
+        if (obj.title === tag.title) {
+          return { ...obj, isChecked: !obj.isChecked };
+        }
+        return obj;
+      })
+    );
+  };
+
+  useEffect(() => {
+    let tagItems = tagState.filter((tag) => tag.isChecked);
+    let tagTitles = tagItems.map((tag) => tag.title);
+
+    if (tagTitles.length === 0) {
+      tagTitles = [
+        'array',
+        'hashed map',
+        'sorting',
+        'stack',
+        'linked list',
+        'graph',
+        'tree',
+      ];
+    }
+
+    setTagsArray(tagTitles);
+  }, [tagState]);
+
+  const filterSourcesHandler = (source) => {
+    setSourceState((current) =>
+      current.map((obj) => {
+        if (obj.title === source.title) {
+          return { ...obj, isChecked: !obj.isChecked };
+        }
+        return obj;
+      })
+    );
+  };
+
+  useEffect(() => {
+    let sourceItems = sourceState.filter((source) => source.isChecked);
+    let sourceTitles = sourceItems.map((source) => source.title);
+
+    if (sourceTitles.length === 0) {
+      sourceTitles = ['Leetcode', 'GeeksForGeeks', 'CodingNinjas', 'CodeChef'];
+    }
+
+    setSourcesArray(sourceTitles);
+  }, [sourceState]);
 
   const { loading, error, data } = useQuery(GET_ALL_QUESTIONS, {
     variables: {
@@ -46,10 +157,6 @@ const HomeContent = () => {
       sources: sourcesArray,
     },
   });
-
-  const updateTagsArray = (tags) => {
-    setTagsArray(tags);
-  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -67,7 +174,12 @@ const HomeContent = () => {
         })}
       </div>
       <div className={styles['home-content__filter-section']}>
-        <FilterSection updateTagsArray={updateTagsArray} />
+        <FilterSection
+          filterTagsHandler={filterTagsHandler}
+          filterSourcesHandler={filterSourcesHandler}
+          tagState={tagState}
+          sourceState={sourceState}
+        />
       </div>
     </div>
   );
