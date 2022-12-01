@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gql } from '@apollo/client';
 import { useQuery } from '@apollo/client';
 
@@ -7,37 +7,49 @@ import QuestionCards from './QuestionCards';
 import FilterSection from './FilterSection';
 
 const GET_ALL_QUESTIONS = gql`
-  query MyQuery {
-    questions {
-      id
+  query MyQuery($tags: [String!]!, $sources: [String!]!) {
+    questions(
+      where: { tags: { tag_name: { _in: $tags } }, source: { _in: $sources } }
+    ) {
       difficulty
+      id
       question_url
       source
       title
-    }
-  }
-`;
-
-const GET_FILTERED_QUESTION_IDS = gql`
-  query MyQuery($tags: [String!]!) {
-    tags(where: { tag_name: { _in: $tags } }) {
-      question_id
+      tags {
+        tag_name
+        id
+      }
     }
   }
 `;
 
 const HomeContent = () => {
-  const { loading, error, data } = useQuery(GET_ALL_QUESTIONS);
-  const { questionIdLoading, questionIdError, questionIdData } = useQuery(
-    GET_FILTERED_QUESTION_IDS,
-    {
-      tags: ['array', 'stack'],
-    }
-  );
+  const initialTagsArray = [
+    'array',
+    'hashed map',
+    'sorting',
+    'stack',
+    'linked list',
+    'graph',
+    'tree',
+  ];
 
-  useEffect(() => {
-    console.log(questionIdData);
-  }, [questionIdData]);
+  const initialSourcesArray = ['Leetcode', 'GeeksForGeeks'];
+
+  const [tagsArray, setTagsArray] = useState(initialTagsArray);
+  const [sourcesArray, setSourcesArray] = useState(initialSourcesArray);
+
+  const { loading, error, data } = useQuery(GET_ALL_QUESTIONS, {
+    variables: {
+      tags: tagsArray,
+      sources: sourcesArray,
+    },
+  });
+
+  const updateTagsArray = (tags) => {
+    setTagsArray(tags);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -55,7 +67,7 @@ const HomeContent = () => {
         })}
       </div>
       <div className={styles['home-content__filter-section']}>
-        <FilterSection />
+        <FilterSection updateTagsArray={updateTagsArray} />
       </div>
     </div>
   );

@@ -1,20 +1,8 @@
 import React, { useEffect, useState } from 'react';
-// import { gql } from '@apollo/client';
-// import { useQuery } from '@apollo/client';
 
 import styles from './FilterSection.module.css';
 
-// const GET_ALL_TAGS = gql`
-//   query MyQuery {
-//     tags(distinct_on: tag_name) {
-//       tag_name
-//     }
-//   }
-// `;
-
-const FilterSection = () => {
-  // const { loading, error, data } = useQuery(GET_ALL_TAGS);
-
+const FilterSection = ({ updateTagsArray }) => {
   const tagsInitialState = [
     {
       title: 'array',
@@ -48,14 +36,28 @@ const FilterSection = () => {
 
   const [tags, setTags] = useState([]);
   const [tagState, setTagState] = useState(tagsInitialState);
-  const [questionList, setQuestionList] = useState([]);
 
   useEffect(() => {
-    const tagItems = tagState.filter((tag) => tag.isChecked);
-    const tagTitles = tagItems.map((tag) => tag.title);
+    updateTagsArray(tags);
+  }, [tags]);
+
+  useEffect(() => {
+    let tagItems = tagState.filter((tag) => tag.isChecked);
+    let tagTitles = tagItems.map((tag) => tag.title);
+
+    if (tagTitles.length === 0) {
+      tagTitles = [
+        'array',
+        'hashed map',
+        'sorting',
+        'stack',
+        'linked list',
+        'graph',
+        'tree',
+      ];
+    }
 
     setTags(tagTitles);
-    console.log(tagTitles);
   }, [tagState]);
 
   const handleOnChange = (tag) => {
@@ -68,14 +70,6 @@ const FilterSection = () => {
       })
     );
   };
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-  // if (error) {
-  //   console.error(error);
-  //   return <div>Error!</div>;
-  // }
 
   return (
     <div className={styles['filter-section']}>
