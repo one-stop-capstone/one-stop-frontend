@@ -94,3 +94,11 @@ export const getCodeSheetQuestions = gql`
     }
   }
 `;
+export const getUser = gql`
+  query GET_USER($id: uuid!) {
+    users_by_pk(id: $id) {
+      email
+      name
+    }
+  }
+`;

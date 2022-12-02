@@ -10,6 +10,7 @@ const CodeSheetPage = () => {
     <>
       <div className={styles["main-content"]}>
         <div className={styles["title"]}>Code Sheets</div>
+        <div className={styles["divider__line"]} />
         <Routes>
           <Route path="/" element={<CodeSheetTabBar />} />
           <Route path=":codesheetId" element={<CodeSheetQuestions />} />
