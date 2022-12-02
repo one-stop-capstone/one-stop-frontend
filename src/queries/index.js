@@ -68,3 +68,29 @@ export const getTopRatedCodesheets = gql`
     }
   }
 `;
+
+export const getCodeSheetQuestions = gql`
+  query GET_CODESHEET_QUESTIONS($id: uuid!) {
+    codesheets_by_pk(id: $id) {
+      codesheet_questions {
+        question {
+          difficulty
+          id
+          question_url
+          source
+          title
+          tags {
+            tag_name
+          }
+        }
+      }
+      title
+      description
+      codesheet_ratings_aggregate {
+        aggregate {
+          count(columns: codesheet_id)
+        }
+      }
+    }
+  }
+`;
