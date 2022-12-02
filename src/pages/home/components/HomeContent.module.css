@@ -1,0 +1,12 @@
+.home-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-content__question-cards {
+  flex: 5;
+}
+
+.home-content__filter-section {
+  flex: 1;
+}

@@ -1,27 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Settings.module.css";
-import { Button, Radio, Space, Divider } from "antd";
-import { DownloadOutlined } from '@ant-design/icons';
+import { Switch } from "antd";
 
 const Settings = () => {
   const [inputs, setInputs] = useState({});
-  const year = new Date().getFullYear();
-  const years1 = Array.from(new Array(20), (val, index) => index + year);
-  const years2 = Array.from(
-    new Array(10),
-    (val, index) => year - index
-  ).reverse();
-  const years = years2.concat(years1);
-
-  const [favorite, setFavorite] = React.useState("default");
-
-  const darkTheme = () => {
-    setFavorite("dark");
-  };
-
-  const defaultTheme = () => {
-    setFavorite("default");
-  };
+  const [active, setActive] = useState(true);
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -95,39 +78,24 @@ const Settings = () => {
               </div>
             </div>
             <div className={styles["inner_card"]}>
-              <RadioButton
-                label="Dark Theme"
-                value={favorite === "dark"}
-                onChange={darkTheme}
-              />
-              <RadioButton
-                label="Default"
-                value={favorite === "default"}
-                onChange={defaultTheme}
+              <label>App Theme:</label>
+              <Switch
+                checkedChildren="Default"
+                unCheckedChildren="Dark"
+                defaultChecked
+                onClick={() => setActive(!active)}
+                checked={active}
+                style={{
+                  backgroundColor: active ? "#0D8BFF" : "#2b1f71",
+                  margin: "0 2rem 0 2rem",
+                }}
               />
             </div>
             <input type="submit" className={styles["btn"]}></input>
-            <Button
-              type="primary"
-              shape="round"
-              icon={<DownloadOutlined />}
-              danger
-            >
-              Log Out
-            </Button>
           </form>
         </div>
       </div>
     </div>
-  );
-};
-
-const RadioButton = ({ label, value, onChange }) => {
-  return (
-    <label>
-      <input type="radio" checked={value} onChange={onChange} />
-      {label}
-    </label>
   );
 };
 

@@ -26,14 +26,6 @@
   font-weight: bold;
 }
 
-.tag-names {
-  margin-top: 0.75rem;
-  display: flex;
-  flex-direction: row;
-  font-size: 1.25rem;
-  color: white;
-}
-
 .tag-card {
   background-color: #0d8bff;
   border-radius: 0.5rem;
@@ -42,10 +34,9 @@
 }
 
 .right-section {
-  /* background-color: black; */
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .buttons {
@@ -54,7 +45,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
-  /* background-color: aliceblue; */
 }
 
 .solve-button {
@@ -62,7 +52,7 @@
   border-radius: 1rem;
   border: none;
   font-size: 1.5rem;
-  padding: 1rem 2.5rem 1rem 2.5rem;
+  padding: 0.5rem 1.5rem;
   margin-right: 1rem;
   cursor: pointer;
 }
@@ -70,23 +60,17 @@
 .add-button {
   background-color: #9a9ab0;
   border: 0.2rem solid #0d8bff;
-  padding: 0.25rem 1rem 0.25rem 1rem;
+  padding: 0 0.5rem;
   color: #0d8bff;
   border-radius: 50%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 .extra-details {
-  margin: 1rem;
-  width: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
-
-.extra-details p {
-  /* padding: 0.5rem 1rem 0.5rem 1rem; */
+  padding: 0.5rem 1rem 0.5rem 1rem;
   font-weight: bold;
   font-size: 1.5rem;
 }
