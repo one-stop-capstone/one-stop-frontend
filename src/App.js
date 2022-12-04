@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import AuthPage from "./pages/auth/AuthPage";
-import AuthProvider from "./context/AuthContext";
+
 import { useAuth } from "./context/AuthContext";
 import Dashboard from "./Dashboard.jsx";
 import styles from "./App.module.css";

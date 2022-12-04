@@ -62,7 +62,9 @@ const AuthInputFormSignin = () => {
           )}
 
           <div className={styles["auth-input-form__bottom"]}>
-            <Button text="Sign In" type="submit" disabled={loading} />
+            <div style={{ width: "40%" }}>
+              <Button text="Sign In" type="submit" disabled={loading} />
+            </div>
             <div className={styles["auth-input-form__signup-button"]}>
               <Link to="/auth/signup">Sign up now</Link>
             </div>

@@ -6,8 +6,7 @@ import {
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { useQuery } from "@apollo/client";
-import { getUserID } from "../queries/index";
+
 
 const AuthContext = createContext();
 

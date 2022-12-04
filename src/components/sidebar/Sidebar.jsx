@@ -13,23 +13,29 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className={styles["sidebar"]}>
-      <div className={styles["sidebar-icons__top"]}>
-        <NavLink to="/app/home">
-          <FaHome className={styles["sidebar-icons"]} size="2.5rem" />
-        </NavLink>
-        <NavLink to="/app/code-sheet">
-          <FaList className={styles["sidebar-icons"]} size="2.5rem" />
-        </NavLink>
-        <NavLink to="/app/link-accounts">
-          <FaPaperclip className={styles["sidebar-icons"]} size="2.5rem" />
-        </NavLink>
-        <FaTrophy className={styles["sidebar-icons"]} size="2.5rem" />
+    <>
+      <div className={styles["sidebar"]}>
+        <div className={styles["sidebar-icons__top"]}>
+          <NavLink to="/app/home">
+            <FaHome className={styles["sidebar-icons"]} size="2.5rem" />
+          </NavLink>
+          <NavLink to="/app/code-sheet">
+            <FaList className={styles["sidebar-icons"]} size="2.5rem" />
+          </NavLink>
+          <NavLink to="/app/linked-accounts">
+            <FaPaperclip className={styles["sidebar-icons"]} size="2.5rem" />
+          </NavLink>
+          <NavLink to="/app/contests">
+            <FaTrophy className={styles["sidebar-icons"]} size="2.5rem" />
+          </NavLink>
+        </div>
+        <div className={styles["sidebar-icons__bottom"]}>
+          <NavLink to="/app/settings">
+            <FaRegSun className={styles["sidebar-icons"]} size="2.5rem" />
+          </NavLink>
+        </div>
       </div>
-      <div className={styles["sidebar-icons__bottom"]}>
-        <FaRegSun className={styles["sidebar-icons"]} size="2.5rem" />
-      </div>
-    </div>
+    </>
   );
 };
 

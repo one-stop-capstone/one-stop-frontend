@@ -103,4 +103,14 @@ export const getUser = gql`
   }
 `;
 
-
+export const getUserDetails = gql`
+  query GET_USER_DETAILS($uid: uuid!) {
+    users_by_pk(id: $uid) {
+      email
+      graduating_year
+      name
+      university_name
+      theme
+    }
+  }
+`;

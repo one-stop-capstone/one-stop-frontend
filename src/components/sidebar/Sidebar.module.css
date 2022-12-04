@@ -33,3 +33,11 @@
 .sidebar-icons {
   margin-bottom: 4rem;
 }
+
+.sidebar-icons__bottom a {
+  color: #9a9ab0;
+}
+
+:gloabal .Sidebar_sidebar-icons__bottom__p+tVD {
+  color: #fff;
+}

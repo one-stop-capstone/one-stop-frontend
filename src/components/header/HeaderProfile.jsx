@@ -3,11 +3,18 @@ import { FaRegBell } from "react-icons/fa";
 import { useQuery } from "@apollo/client";
 import { getUser } from "../../queries";
 import { useAuth } from "../../context/AuthContext";
+import { Popover } from "antd";
 
 import styles from "./HeaderProfile.module.css";
+import Button  from "../ui/Button";
 
 const HeaderProfile = () => {
   const { currentUserId } = useAuth();
+  const { logout } = useAuth();
+  const logoutHandler = () => {
+    logout();
+  };
+  const content = <Button text="Logout" onClick={logoutHandler} />;
   const { data, loading, error } = useQuery(getUser, {
     variables: {
       id: currentUserId,
@@ -24,7 +31,9 @@ const HeaderProfile = () => {
         size="1.5rem"
         className={styles["header-profile__notif"]}
       />
-      <div className={styles["header-profile__img"]}></div>
+      <Popover placement="bottom" content={content} trigger="click">
+        <div className={styles["header-profile__img"]} />
+      </Popover>
       <div className={styles["header-profile__details"]}>
         <p className={styles["header-profile__details__name"]}>
           {data.users_by_pk.name}

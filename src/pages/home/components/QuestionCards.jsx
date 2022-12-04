@@ -1,5 +1,4 @@
 import React from "react";
-import { idText } from "typescript";
 
 import styles from "./QuestionCards.module.css";
 import TagSection from "./TagSection";

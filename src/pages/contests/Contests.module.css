@@ -1,0 +1,24 @@
+.settings_container {
+    display: flex;
+    margin: 2rem 10rem 2rem 10rem;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #1f1d2b;
+    padding: 5rem;
+    border-radius: 1rem;
+    width: 80%;
+    
+}
+ 
+.site-card-wrapper {
+    background-color: #1f1d2b;
+}
+
+.card-antd:hover {
+    box-shadow: white 0px 0px 0px 0.5px;
+}
+
+.button-antd {
+    background-color: #1f1d2b;
+    color: white;
+ }

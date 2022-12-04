@@ -6,11 +6,12 @@ import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home/Home";
 import Accounts from "./pages/accounts/Accounts";
-import Profile from "./pages/profile/Profile";
 import { getUserID } from "./queries";
 import { useAuth } from "./context/AuthContext";
 import { useQuery } from "@apollo/client";
 import CodeSheetPage from "./pages/codelist/CodeSheetPage";
+import Settings from "./pages/settings/Settings";
+import Contests from "./pages/contests/Contests";
 
 const Dashboard = () => {
   const { currentUser, fetchUserId } = useAuth();
@@ -34,9 +35,10 @@ const Dashboard = () => {
             <Routes>
               <Route path="/" element={<Navigate to="home" />} />
               <Route path="home" element={<Home />} />
-              <Route path="link-accounts" element={<Accounts />} />
-              <Route path="profile" element={<Profile />} />
-              <Route path="*" element={<Home />} />
+              <Route path="linked-accounts" element={<Accounts />} />
+              <Route path="settings" element={<Settings />} />
+              <Route path="contests" element={<Contests />} />
+              <Route path="*" element={<Dashboard />} />
               <Route path="code-sheet/*" element={<CodeSheetPage />} />
             </Routes>
           </div>
