@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Contests.module.css";
-import upcomingImg from "../../assets/images/upcoming_card.png";
-import ongoingImg from "../../assets/images/current_card.png";
-import finishedImg from "../../assets/images/past_card.png";
+import upcomingImg from "../../assets/images/upcoming-card.png";
+import ongoingImg from "../../assets/images/current-card.png";
+import finishedImg from "../../assets/images/past-card.png";
 
 import { Card, Modal, Button, Table } from "antd";
 import { data_future, data_past, data_present } from "./data";
