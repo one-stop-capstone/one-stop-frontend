@@ -1,0 +1,18 @@
+.tag-card {
+  background-color: grey;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.tag-names {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  color: white;
+}
+
+.tag-names p {
+  margin-right: 1rem;
+}

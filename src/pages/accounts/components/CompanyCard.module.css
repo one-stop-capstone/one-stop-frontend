@@ -26,11 +26,11 @@
 }
 
 .card__button {
-    background-color: #1f1d2b;
+    background-color: #0D8BFF;
     color: #fff;
     border: none;
     padding: 0.5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin: 0.5rem;
     align-self: flex-end;
 }

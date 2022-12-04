@@ -19,9 +19,25 @@
   margin: 2rem;
   display: flex;
   flex-direction: column;
+
+}
+
+.sidebar-icons__top a {
+  color: #9a9ab0;
+}
+
+:global .Sidebar_sidebar-icons__top__Lb5tP a.active {
+  color: #fff;
 }
 
 .sidebar-icons {
-  color: #9a9ab0;
   margin-bottom: 4rem;
+}
+
+.sidebar-icons__bottom a {
+  color: #9a9ab0;
+}
+
+:gloabal .Sidebar_sidebar-icons__bottom__p+tVD {
+  color: #fff;
 }
