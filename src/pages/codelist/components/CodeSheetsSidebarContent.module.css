@@ -1,0 +1,59 @@
+.codesheetsidebar__title {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+}
+
+.divider__line {
+    width: 90%;
+    height: 0px;
+    left: 758.45px;
+    top: 400px;
+    border: 1px solid #92929D;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.codesheetsidebar__options {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+
+    color: #ac9c9c;
+}
+
+/* .codesheetsidebar__options Link {
+    text-decoration: none;
+} */
+
+
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(52, 47, 47, 0.5);
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    padding-left: 0.4rem;
+    color: #bcabab;
+    text-decoration: none;
+
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: #332f46;
+
+
+}

@@ -1,13 +1,13 @@
 .question-card {
-  background-color: #9a9ab0;
+  background-color: #1f1d2b;
   padding: 1.5rem;
-  margin: 1rem;
+  margin: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  border-radius: 1rem;
+  color: white;
+  border-radius: 0.5rem;
 }
 
 .left-section {
@@ -27,7 +27,7 @@
 }
 
 .tag-card {
-  background-color: #0d8bff;
+  background-color: #ac9c9c;
   border-radius: 0.5rem;
   padding: 0.75rem;
   margin-right: 0.5rem;
@@ -58,7 +58,7 @@
 }
 
 .add-button {
-  background-color: #9a9ab0;
+  background-color: #1f1d2b;
   border: 0.2rem solid #0d8bff;
   padding: 0 0.5rem;
   color: #0d8bff;
@@ -73,4 +73,17 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.divider__line {
+  width: 97.5%;
+  height: 0px;
+  left: 758.45px;
+  top: 400px;
+  border: 1px solid #92929D;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
 }

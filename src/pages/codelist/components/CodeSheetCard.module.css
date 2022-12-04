@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 1rem 0.5rem;
     border-radius: 0.3rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -24,6 +24,11 @@
     margin-bottom: 0.5rem;
 }
 
+.codesheetcard__details__title:hover {
+    color: #0D8BFF;
+    text-decoration: underline;
+}
+
 p {
     font-size: 0.8rem;
     color: #ac9c9c;
@@ -34,25 +39,12 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    width: 40%;
 }
 
-.codesheetcard__avataar {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: blueviolet;
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.codesheetcard__avataar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
+
+
 
 .codesheetcard_contaner .codesheetcard__details {
     margin-left: 1.5rem;
@@ -97,3 +89,106 @@ p {
 
 
 /* .codesheetcard_contaner .codesheetcard_info .codesheetcard__avataar .codesheetcard__details .codesheetcard__details__title .codesheetcard__details__creator .codesheetcard__questionsno .codesheetcard__likebutton */
+
+/* 83f13b41-4c89-42e9-8ba3-336d7681e733
+95448adc-4a26-43f4-ae32-bc6615d824e0
+Amazon Master Sheet
+Prepare for you Amazon Interview
+true
+2022-11-30T06:51:18.803379+00:00
+View
+View
+View */
+
+
+
+/* 
+f9dc41f1-0271-4f47-ad87-a58485576f97 */
+
+
+/* 8c790a7e-e22b-4b26-bd89-8a78da71fa71
+firebase-001
+Glen Dsouza
+Bennett University
+2023
+true
+true
+true
+false
+false
+dark
+true
+glen.dsouza@onestop.com
+
+
+
+
+6591dbbf-4376-42fa-bcda-c02322406cb5
+firebase-002
+Utsav Kansal
+Bennett University
+2024
+false
+true
+true
+true
+true
+dark
+false
+utsav.kansal@gmail.com
+
+
+
+
+ad5790d8-cc02-427b-b5d1-4b7669919cab
+firebase-003
+Apurva Bhardwaj
+Bennett University
+2024
+true
+false
+false
+true
+true
+dark
+true
+apurva.bhardwaj@gmail.com
+
+
+
+
+828af037-7314-4dbe-a308-4b797bc1826e
+firebase-004
+Shraddha
+Bennett University
+2025
+false
+false
+false
+true
+true
+dark
+true
+shraddha@gmail.com
+
+
+
+
+cd147fd4-85e9-4bb5-a093-21216ef0a444
+firebase-005
+Chinmay Srivastava
+Bennett University
+2025
+true
+true
+true
+false
+false
+dark
+false
+chinmay.srivastava@gmail.com
+
+
+
+
+95448adc-4a26-43f4-ae32-bc6615d824e0 */

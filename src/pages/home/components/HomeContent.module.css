@@ -1,6 +1,7 @@
 .home-content {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .home-content__question-cards {
@@ -9,4 +10,24 @@
 
 .home-content__filter-section {
   flex: 1;
+}
+
+.title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.divider__line {
+  width: 100%;
+  height: 0px;
+  left: 758.45px;
+  top: 400px;
+  border: 1px solid #92929D;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }

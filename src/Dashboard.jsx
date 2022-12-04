@@ -41,7 +41,7 @@ const Dashboard = () => {
               <Route path="/settings" element={<Settings />} />
               <Route path="/contests" element={<Contests />} />
               <Route path="*" element={<Home />} />
-              <Route path="code-sheet" element={<CodeSheetPage />} />
+              <Route path="code-sheet/*" element={<CodeSheetPage />} />
             </Routes>
           </div>
         </div>

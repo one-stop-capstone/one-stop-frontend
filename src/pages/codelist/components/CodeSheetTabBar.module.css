@@ -11,10 +11,10 @@
     align-items: center;
 }
 
-/* .tab {
+.tab {
     color: white;
 
-} */
+}
 
 .button {
     background-color: #0D8BFF;
@@ -42,4 +42,8 @@
 .item_label {
     font-size: 1rem;
     font-weight: 500;
+}
+
+.error {
+    color: red
 }
