@@ -17,7 +17,6 @@ import { ConfigProvider } from "antd";
 function App() {
   const [client] = useState(createApolloClient());
   const { currentUser } = useAuth();
-  console.log(currentUser);
   return (
     <ApolloProvider client={client}>
       <ConfigProvider
