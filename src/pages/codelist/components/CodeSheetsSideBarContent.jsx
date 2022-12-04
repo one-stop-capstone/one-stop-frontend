@@ -6,9 +6,6 @@ import { getTopRatedCodesheets } from "../../../queries";
 
 const CodeSheetsSideBarContent = () => {
   const { data, loading, error } = useQuery(getTopRatedCodesheets);
-  //   React.useEffect(() => {
-  //     console.log(data.codesheets);
-  //   }, [data]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error...</div>;

@@ -5,6 +5,8 @@ import { useQuery } from "@apollo/client";
 import styles from "./HomeContent.module.css";
 import QuestionCards from "./QuestionCards";
 import FilterSection from "./FilterSection";
+import { Spin } from "antd";
+import AddToCodesheetModal from "./AddToCodesheetModal";
 
 const GET_ALL_QUESTIONS = gql`
   query MyQuery($tags: [String!]!, $sources: [String!]!) {
@@ -25,6 +27,16 @@ const GET_ALL_QUESTIONS = gql`
 `;
 
 const HomeContent = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [currentQuestionId, setCurrentQuestionId] = React.useState("");
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const addToCodesheetHandler = (id) => {
+    setIsModalOpen(true);
+    setCurrentQuestionId(id);
+  };
   const initialTagsArray = [
     "array",
     "hashed map",
@@ -159,7 +171,21 @@ const HomeContent = () => {
   });
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Spin size="large">
+          <div className="content" />
+        </Spin>
+      </div>
+    );
   }
   if (error) {
     console.error(error);
@@ -172,7 +198,11 @@ const HomeContent = () => {
         <div className={styles["home-content__question-cards"]}>
           {data["questions"].map((question) => {
             return (
-              <QuestionCards key={question.id} questionDetails={question} />
+              <QuestionCards
+                key={question.id}
+                questionDetails={question}
+                addToCodesheetHandler={addToCodesheetHandler}
+              />
             );
           })}
         </div>
@@ -185,6 +215,11 @@ const HomeContent = () => {
           />
         </div>
       </div>
+      <AddToCodesheetModal
+        handleCancel={handleCancel}
+        isModalOpen={isModalOpen}
+        currentQuestionId={currentQuestionId}
+      />
     </>
   );
 };

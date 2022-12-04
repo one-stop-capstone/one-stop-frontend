@@ -76,3 +76,13 @@ export const toggleVisibility = gql`
     }
   }
 `;
+
+export const addQuestionCodesheet = gql`
+  mutation MyMutation($codesheet_id: uuid, $question_id: uuid) {
+    insert_codesheet_questions(
+      objects: { codesheet_id: $codesheet_id, question_id: $question_id }
+    ) {
+      affected_rows
+    }
+  }
+`;

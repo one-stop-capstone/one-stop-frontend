@@ -24,7 +24,6 @@ const CodeSheetCard = (props) => {
         .then((data) => {
           setVisibilty(!visibilty);
           setLoading(false);
-          console.log(data);
         })
         .catch((err) => {
           console.log(err);

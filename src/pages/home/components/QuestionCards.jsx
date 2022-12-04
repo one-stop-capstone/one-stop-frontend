@@ -1,15 +1,14 @@
 import React from "react";
+import { idText } from "typescript";
 
 import styles from "./QuestionCards.module.css";
 import TagSection from "./TagSection";
 
-const QuestionCards = ({ questionDetails }) => {
+const QuestionCards = ({ questionDetails, addToCodesheetHandler }) => {
   const solveButtonHandler = (e) => {
     e.preventDefault();
     window.open(questionDetails.question_url, "_blank");
   };
-
-  console.log(questionDetails);
 
   return (
     <>
@@ -27,7 +26,12 @@ const QuestionCards = ({ questionDetails }) => {
             >
               Solve
             </button>
-            <button className={styles["add-button"]}>+</button>
+            <button
+              className={styles["add-button"]}
+              onClick={() => addToCodesheetHandler(questionDetails.id)}
+            >
+              +
+            </button>
           </div>
           <div className={styles["extra-details"]}>
             {questionDetails.difficulty}
